@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from news.views import pageNotFound
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('news.urls'))
 ]
+
+handler404 = pageNotFound
