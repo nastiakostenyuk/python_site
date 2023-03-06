@@ -1,0 +1,9 @@
+<div>
+    <h1>Список категорій</h1>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'news:category' category.id %}"> {{ category.name }} </a></li>
+            <hr>
+        {% endfor %}
+    </ul>
+</div>
