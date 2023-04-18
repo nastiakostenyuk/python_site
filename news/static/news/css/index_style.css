@@ -1,0 +1,55 @@
+.menu {
+    margin: 12px 8px 0px 8px;
+    background: #CFCFCF;
+}
+
+.python-logo{
+    width: 52px;
+    height: 52px;
+    margin: 10px 0px 0px 8px;
+}
+
+ul.main-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.main-menu li {
+  float: left;
+}
+
+ul.main-menu li.logo {margin: 0;}
+ul.main-menu li.last {float: right;}
+
+ul.main-menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Black Han Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+
+  color: #000000;
+}
+
+ul.main-menu li a:hover {
+  background-color: rgba(136, 136, 136, 1);
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 52px;
+    height: 52px;
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-left: 12px;
+
+}

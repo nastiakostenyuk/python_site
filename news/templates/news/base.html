@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python-{{ title }}</title>
+    <link type="text/css" href="{% static 'news/css/index_style.css' %}" rel="stylesheet" />
+
+</head>
+<body>
+{% block menu %}
+<div class="menu">
+
+    <ul class="main-menu">
+        <li><img class="logo" src="{% static 'news/images/python.svg' %}" alt="pt"></li>
+<!--        <li class="logo"><a href="#"><div class="logo"></div></a></li>-->
+        {% for item in menu %}
+            {% if not forloop.last  %}
+                <li><a href="/">{{ item }}</a></li>
+            {% else %}
+                <li class="last"><a href="/">{{ item }}</a></li>
+<!--                  <li><a href="#"></a><img  src= alt="python" class="python-logo"></li>-->
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock  %}
+
+{% block title %}
+<h1> {{ title }} </h1>
+{% endblock  %}
+</body>
+</html>
