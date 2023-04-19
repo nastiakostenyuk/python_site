@@ -8,7 +8,8 @@ menu = ['Про сайт', "Добавити статтю", "Увійти"]
 
 
 def index(request):
-    return render(request, 'news/index.html', {'title': 'Головна сторінка', 'menu': menu})
+    category = Category.objects.all()
+    return render(request, 'news/index.html', {'title': 'Головна сторінка', 'menu': menu, 'category': category})
 
 
 def about(request):

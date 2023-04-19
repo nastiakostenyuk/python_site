@@ -1,0 +1,116 @@
+body {
+    font-family: 'Montserrat';
+}
+
+.menu {
+    margin: 12px 8px 24px 8px;
+    background: #CFCFCF;
+}
+
+.python-logo{
+    width: 52px;
+    height: 52px;
+    margin: 10px 0px 0px 8px;
+}
+
+ul.main-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.main-menu li {
+  float: left;
+}
+
+ul.main-menu li.logo {margin: 0;}
+ul.main-menu li.last {float: right;}
+
+ul.main-menu li a {
+  display: block;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+
+  color: #000000;
+}
+
+ul.main-menu li a:hover {
+  background-color: rgba(136, 136, 136, 1);
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 52px;
+    height: 52px;
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-left: 12px;
+
+}
+
+.side-bar{
+  margin-left: 8px;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  background-color: #CFCFCF;
+  overflow-x: hidden;
+
+
+}
+.side-bar a {
+  padding: 6px 0px 0px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.side-bar h3 {
+  padding: 6px 0px 0px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111111;
+  display: block;
+
+}
+
+.side-bar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 220px; /* Same as the width of the sidenav */
+}
+
+.main h1{
+  text-align: center;
+}
+
+.content{
+  margin-left: 220px;
+   text-align: center;
+}
+
+.content p{
+  font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: #000000;
+}
+
+.python-logo{
+    width: 1061px;
+    height: 335px;
+    left: 285px;
+    top: 270px
+}
+

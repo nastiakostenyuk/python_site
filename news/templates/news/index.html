@@ -1,6 +1,10 @@
 {% extends 'news/base.html' %}
+{% load static %}
 
-{% block title %}
-{{ block.super }}
-<h2>Все працює</h2>
-{% endblock  %}
+
+{%  block content %}
+<div class="content">
+    <p>Ресурс для вивчення мови програмування</p>
+    <img class="python-logo" src="{% static 'news/images/python-logo.png' %}" alt="pythont">
+</div>
+{%  endblock %}

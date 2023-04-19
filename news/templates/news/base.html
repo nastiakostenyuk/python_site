@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Python-{{ title }}</title>
-    <link type="text/css" href="{% static 'news/css/index_style.css' %}" rel="stylesheet" />
-
+    <link type="text/css" href="{% static 'news/css/base.css' %}" rel="stylesheet" />
+   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
 {% block menu %}
@@ -16,19 +16,31 @@
 <!--        <li class="logo"><a href="#"><div class="logo"></div></a></li>-->
         {% for item in menu %}
             {% if not forloop.last  %}
-                <li><a href="/">{{ item }}</a></li>
+                <li><h3><a href="/">{{ item }}</a></h3></li>
             {% else %}
-                <li class="last"><a href="/">{{ item }}</a></li>
+                <li class="last"><h3><a href="/">{{ item }}</a></h3></li>
 <!--                  <li><a href="#"></a><img  src= alt="python" class="python-logo"></li>-->
             {% endif %}
         {% endfor %}
     </ul>
 </div>
+<div class="side-bar">
+    <h3>Категорії</h3>
+    {% for item in category %}
+        <a href="#">{{ item }}</a>
+    {% endfor %}
+</div>
+
 
 {% endblock  %}
 
 {% block title %}
-<h1> {{ title }} </h1>
+<div class="main">
+  <h1> {{ title }} </h1>
+</div>
 {% endblock  %}
+
+{%  block content %}
+{%  endblock %}
 </body>
 </html>
