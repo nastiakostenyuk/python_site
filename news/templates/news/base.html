@@ -10,15 +10,14 @@
 <body>
 {% block menu %}
 <div class="menu">
-
     <ul class="main-menu">
-        <li><img class="logo" src="{% static 'news/images/python.svg' %}" alt="pt"></li>
+        <li><a href="{% url 'news:home' %}"><img class="logo" src="{% static 'news/images/python.svg' %}" alt="pt"></a></li>
 <!--        <li class="logo"><a href="#"><div class="logo"></div></a></li>-->
         {% for item in menu %}
             {% if not forloop.last  %}
-                <li><h3><a href="/">{{ item }}</a></h3></li>
+                <li><h3><a href="{% url item.url_name %}">{{ item.title }}</a></h3></li>
             {% else %}
-                <li class="last"><h3><a href="/">{{ item }}</a></h3></li>
+                <li class="last"><h3><a href="{% url item.url_name %}">{{ item.title }}</a></h3></li>
 <!--                  <li><a href="#"></a><img  src= alt="python" class="python-logo"></li>-->
             {% endif %}
         {% endfor %}
@@ -27,7 +26,7 @@
 <div class="side-bar">
     <h3>Категорії</h3>
     {% for item in category %}
-        <a href="#">{{ item }}</a>
+        <a href="{{ item.get_absolute_url }} ">{{ item }}</a>
     {% endfor %}
 </div>
 
@@ -42,5 +41,6 @@
 
 {%  block content %}
 {%  endblock %}
+
 </body>
 </html>
